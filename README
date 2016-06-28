@@ -1,0 +1,17 @@
+ZiKDB
+=====
+
+- Make the file system an actual database
+    - Fully embedded, literally a directory to run SQL on (like sqlite but for files)
+    - Let's say... no hidden files? No hidden metadata? To insert simply add a file!
+- Every file is a tuple
+    - Extended file attributes are "attributes" (columns)
+    - The file has actual content, like photos
+    - Directory hierarchy is index (primary index)
+    - Means a single primary key
+- A query returns a set of file descriptors <FD> 
+    - "Standard" SQL
+    - Schema is top level of directory
+    - Table is level under
+    - Everything under are leaves in the index
+    - SELECT * FROM schema.table WHERE x=5 just returns a bunch of paths
