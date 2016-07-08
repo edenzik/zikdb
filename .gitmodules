@@ -1,0 +1,3 @@
+[submodule "third-party/pxattr"]
+	path = third-party/pxattr
+	url = https://github.com/edenzik/pxattr.git
